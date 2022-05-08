@@ -1,6 +1,6 @@
 import {Component, Inject, OnInit} from '@angular/core';
 import { MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
-import { CadastroClientes } from 'src/app/views/home/home.component';
+import { CadastroClientes } from 'src/app/models/CadastroClientes';
 
 @Component({
   selector: 'app-element-dialog',

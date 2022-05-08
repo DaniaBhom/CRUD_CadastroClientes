@@ -1,8 +1,9 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { MatTable } from '@angular/material/table';
-import { CadastroClientes } from 'src/app/models/CadastroClientes';
 import { ElementDialogComponent } from 'src/app/shared/element-dialog/element-dialog.component';
+import { CadastroClientes } from './../../models/CadastroClientes';
+import { CadastroClientesService } from './../../services/cadastroClientes.service';
 
 const ELEMENT_DATA: CadastroClientes[] = [
   {codigo: 1, nome: 'José Almeida', email: 'dbcodigo@gmail.com', wathsapp: 111111111},
@@ -20,15 +21,24 @@ const ELEMENT_DATA: CadastroClientes[] = [
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
-  styleUrls: ['./home.component.css']
+  styleUrls: ['./home.component.css'],
+  providers: [CadastroClientesService]
 })
 export class HomeComponent implements OnInit {
   @ViewChild(MatTable)
   table!: MatTable<any>;
   displayedColumns: string[] = ['codigo', 'nome', 'email', 'wathsapp', 'actions'];
-  dataSource = ELEMENT_DATA;
+  dataSource!: CadastroClientes[];
   
-  constructor(public dialog: MatDialog) { }
+  constructor(
+    public dialog: MatDialog,
+    public cadastroClientesService: CadastroClientesService
+    ) {
+      this.cadastroClientesService.getElements()
+      .subscribe((data: CadastroClientes[]) => {
+        this.dataSource = data;
+      });
+     }
     
   ngOnInit(): void {
   }
