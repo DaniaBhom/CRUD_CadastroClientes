@@ -5,7 +5,7 @@ import { CadastroClientes } from '../models/CadastroClientes';
 
 @Injectable()
 export class CadastroClientesService {
-    elementApiUrl = 'https://localhost:44366/api/CadastroClientes';
+  elementApiUrl = 'https://localhost:44366/api/CadastroClientes';
   constructor(private http: HttpClient) { }
 
   getElements(): Observable<CadastroClientes[]> {
