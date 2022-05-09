@@ -6,15 +6,15 @@ import { CadastroClientes } from './../../models/CadastroClientes';
 
 const ELEMENT_DATA: CadastroClientes[] = [
   {codigo: 1, nome: 'José Almeida', email: 'josealmeida@gmail.com', wathsapp: '(47) 9971-2211'},
-  {codigo: 2, nome: 'Marcos da Costa', email: 'marcoscosta@gmail.com', wathsapp: '(47) 9971-2211'},
-  {codigo: 3, nome: 'Aline Tavares', email: 'alinetavares@gmail.com', wathsapp: '(47) 9971-2211'},
-  {codigo: 4, nome: 'Karina Silva', email: 'karinasilva@gmail.com', wathsapp: '(47) 9971-2211'},
-  {codigo: 5, nome: 'Jéssica Carvalho', email: 'jessicacarvalho@gmail.com', wathsapp: '(47) 9971-2211'},
-  {codigo: 6, nome: 'Daniel Carlos', email: 'danielcarlos@gmail.com', wathsapp: '(47) 9971-2211'},
-  {codigo: 7, nome: 'Henrique Faria', email: 'henriquefaria@gmail.com', wathsapp: '(47) 9971-2211'},
-  {codigo: 8, nome: 'João Medeiros', email: 'joaomedeiros@gmail.com', wathsapp: '(47) 9971-2211'},
-  {codigo: 9, nome: 'Caique Furtado', email: 'caiquefurtado@gmail.com', wathsapp: '(47) 9971-2211'},
-  {codigo: 10, nome: 'Gilson Almeida', email: 'gilsonalmeida@gmail.com', wathsapp: '(47) 9971-2211'},
+  {codigo: 2, nome: 'Marcos da Costa', email: 'marcoscosta@gmail.com', wathsapp: '(47) 9971-2222'},
+  {codigo: 3, nome: 'Aline Tavares', email: 'alinetavares@gmail.com', wathsapp: '(47) 9971-2233'},
+  {codigo: 4, nome: 'Karina Silva', email: 'karinasilva@gmail.com', wathsapp: '(47) 9971-2244'},
+  {codigo: 5, nome: 'Jéssica Carvalho', email: 'jessicacarvalho@gmail.com', wathsapp: '(47) 9971-2255'},
+  {codigo: 6, nome: 'Daniel Carlos', email: 'danielcarlos@gmail.com', wathsapp: '(47) 9971-2266'},
+  {codigo: 7, nome: 'Henrique Faria', email: 'henriquefaria@gmail.com', wathsapp: '(47) 9971-2277'},
+  {codigo: 8, nome: 'João Medeiros', email: 'joaomedeiros@gmail.com', wathsapp: '(47) 9971-2288'},
+  {codigo: 9, nome: 'Caique Furtado', email: 'caiquefurtado@gmail.com', wathsapp: '(47) 9971-2299'},
+  {codigo: 10, nome: 'Gilson Almeida', email: 'gilsonalmeida@gmail.com', wathsapp: '(47) 9971-2200'},
 ];
 
 
