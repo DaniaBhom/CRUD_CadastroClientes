@@ -3,42 +3,34 @@ import { MatDialog } from '@angular/material/dialog';
 import { MatTable } from '@angular/material/table';
 import { ElementDialogComponent } from 'src/app/shared/element-dialog/element-dialog.component';
 import { CadastroClientes } from './../../models/CadastroClientes';
-import { CadastroClientesService } from './../../services/cadastroClientes.service';
 
 const ELEMENT_DATA: CadastroClientes[] = [
-  {codigo: 1, nome: 'José Almeida', email: 'dbcodigo@gmail.com', wathsapp: 111111111},
-  {codigo: 2, nome: 'Marcos da Costa', email: 'dbcodigo@gmail.com', wathsapp: 222222222},
-  {codigo: 3, nome: 'Aline Tavares', email: 'dbcodigo@gmail.com', wathsapp: 3333333333},
-  {codigo: 4, nome: 'Karina Silva', email: 'dbcodigo@gmail.com', wathsapp: 444444444},
-  {codigo: 5, nome: 'Jéssica Carvalho', email: 'dbcodigo@gmail.com', wathsapp: 555555555},
-  {codigo: 6, nome: 'Daniel Carlos', email: 'dbcodigo@gmail.com', wathsapp: 66666666666},
-  {codigo: 7, nome: 'Henrique Faria', email: 'dbcodigo@gmail.com', wathsapp: 7777777777},
-  {codigo: 8, nome: 'Joao Medeiros', email: 'dbcodigo@gmail.com', wathsapp: 88888888888},
-  {codigo: 9, nome: 'Caique Furtado', email: 'dbcodigo@gmail.com', wathsapp: 9999999999},
-  {codigo: 10, nome: 'Gilson Almeida', email: 'dbcodigo@gmail.com', wathsapp: 11111111111},
+  {codigo: 1, nome: 'José Almeida', email: 'josealmeida@gmail.com', wathsapp: '(47) 9971-2211'},
+  {codigo: 2, nome: 'Marcos da Costa', email: 'marcoscosta@gmail.com', wathsapp: '(47) 9971-2211'},
+  {codigo: 3, nome: 'Aline Tavares', email: 'alinetavares@gmail.com', wathsapp: '(47) 9971-2211'},
+  {codigo: 4, nome: 'Karina Silva', email: 'karinasilva@gmail.com', wathsapp: '(47) 9971-2211'},
+  {codigo: 5, nome: 'Jéssica Carvalho', email: 'jessicacarvalho@gmail.com', wathsapp: '(47) 9971-2211'},
+  {codigo: 6, nome: 'Daniel Carlos', email: 'danielcarlos@gmail.com', wathsapp: '(47) 9971-2211'},
+  {codigo: 7, nome: 'Henrique Faria', email: 'henriquefaria@gmail.com', wathsapp: '(47) 9971-2211'},
+  {codigo: 8, nome: 'João Medeiros', email: 'joaomedeiros@gmail.com', wathsapp: '(47) 9971-2211'},
+  {codigo: 9, nome: 'Caique Furtado', email: 'caiquefurtado@gmail.com', wathsapp: '(47) 9971-2211'},
+  {codigo: 10, nome: 'Gilson Almeida', email: 'gilsonalmeida@gmail.com', wathsapp: '(47) 9971-2211'},
 ];
+
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css'],
-  providers: [CadastroClientesService]
-})
+  })
+
 export class HomeComponent implements OnInit {
   @ViewChild(MatTable)
   table!: MatTable<any>;
   displayedColumns: string[] = ['codigo', 'nome', 'email', 'wathsapp', 'actions'];
-  dataSource!: CadastroClientes[];
+  dataSource = ELEMENT_DATA;
   
-  constructor(
-    public dialog: MatDialog,
-    public cadastroClientesService: CadastroClientesService
-    ) {
-      this.cadastroClientesService.getElements()
-      .subscribe((data: CadastroClientes[]) => {
-        this.dataSource = data;
-      });
-     }
+  constructor(public dialog: MatDialog) {}
     
   ngOnInit(): void {
   }
